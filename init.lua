@@ -8,6 +8,8 @@ require('treesitter-config')
 require('autopairs-config')
 require('whichkey-config')
 require('telescope-config')
+require('colorizer-config')
+require('lsp')
 
 -- For dark theme
 vim.g.vscode_style = "dark"

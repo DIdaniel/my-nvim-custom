@@ -45,4 +45,36 @@ return require('packer').startup(function()
     'nvim-telescope/telescope.nvim',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
+
+  -- cmp
+  use 'neovim/nvim-lspconfig'
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-cmdline'
+  use 'hrsh7th/nvim-cmp'
+  use 'hrsh7th/cmp-vsnip'
+  use 'hrsh7th/vim-vsnip'
+
+  -- lspkind
+  use 'onsails/lspkind-nvim'
+
+  -- react snippets 근데 지워도 될 듯.... 
+  use {'dsznajder/vscode-es7-javascript-react-snippets',
+    run = 'yarn install --frozen-lockfile && yarn compile'
+  }
+
+  -- colorizer for nvim
+  use 'norcalli/nvim-colorizer.lua'
+
+  -- git sign
+  use {
+    'lewis6991/gitsigns.nvim',
+    requires = {
+      'nvim-lua/plenary.nvim'
+    },
+    config = function()
+      require('gitsigns').setup{ current_line_blame = true }
+    end
+  }
 end) 
