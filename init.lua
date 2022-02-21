@@ -9,6 +9,7 @@ require('autopairs-config')
 require('whichkey-config')
 require('telescope-config')
 require('colorizer-config')
+require('dashboard-config')
 require('lsp')
 
 -- For dark theme

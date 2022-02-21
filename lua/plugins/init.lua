@@ -77,4 +77,7 @@ return require('packer').startup(function()
       require('gitsigns').setup{ current_line_blame = true }
     end
   }
+
+  -- dashboard for nvim
+  use 'glepnir/dashboard-nvim'
 end) 
