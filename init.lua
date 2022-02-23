@@ -10,8 +10,13 @@ require('whichkey-config')
 require('telescope-config')
 require('colorizer-config')
 require('dashboard-config')
+require('blankline-config')
+require('format-config')
+require('toggleterm-config')
+require('comment-config')
 require('lsp')
 
+-- neovim color scheme 
 -- For dark theme
 vim.g.vscode_style = "dark"
 -- Enable transparent background.
@@ -21,3 +26,4 @@ vim.g.vscode_italic_comment = 1
 -- Disable nvim-tree background color 
 vim.g.vscode_disable_nvimtree_bg = true
 vim.cmd('colorscheme vscode')
+

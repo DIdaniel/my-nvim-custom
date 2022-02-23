@@ -1,50 +1,37 @@
 -- vim.cmd [[packadd packer.nvim]]
-return require('packer').startup(function()
+return require('packer').startup(function(use)
   -- Packer 
   use 'wbthomason/packer.nvim'
 
-  -- neovim color scheme 
-  -- use 'Mofiqul/vscode.nvim'
-  use 'Mofiqul/vscode.nvim'
+  -- nvim theme
+  use 'Mofiqul/vscode.nvim' 
 
   -- treesitter
   use { 'nvim-treesitter/nvim-treesitter', run = ":TSUpdate" }
 
   -- lualine => bottom bar theme
-  use {
-    'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-  }   
+  use { 'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true } }
 
   -- bufferline
-  use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'}
+  use { 'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons' }
 
   -- nvim-tree
-  use {
-    'kyazdani42/nvim-tree.lua',
-    requires = {
-      'kyazdani42/nvim-web-devicons', -- optional, for file icon
-    },
-    config = function() require'nvim-tree'.setup {} end
-  }
+  use { 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons' } }
 
   -- Use treesitter to autoclose and autorename html tag
-  use {'windwp/nvim-ts-autotag'}
+  use { 'windwp/nvim-ts-autotag' }
 
   -- indent rainbow 
-  use {'p00f/nvim-ts-rainbow'}
+  use { 'p00f/nvim-ts-rainbow' }
 
   -- nvim-autoparis
-  use {'windwp/nvim-autopairs'}
+  use { 'windwp/nvim-autopairs' }
 
   -- which-key
-  use {'folke/which-key.nvim'}
+  use { 'folke/which-key.nvim' }
 
   -- telescope
-  use {
-    'nvim-telescope/telescope.nvim',
-    requires = { {'nvim-lua/plenary.nvim'} }
-  }
+  use { 'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/plenary.nvim'}}}
 
   -- cmp
   use 'neovim/nvim-lspconfig'
@@ -70,9 +57,7 @@ return require('packer').startup(function()
   -- git sign
   use {
     'lewis6991/gitsigns.nvim',
-    requires = {
-      'nvim-lua/plenary.nvim'
-    },
+    requires = { 'nvim-lua/plenary.nvim' },
     config = function()
       require('gitsigns').setup{ current_line_blame = true }
     end
@@ -80,4 +65,22 @@ return require('packer').startup(function()
 
   -- dashboard for nvim
   use 'glepnir/dashboard-nvim'
+
+  -- indent mark
+  use "lukas-reineke/indent-blankline.nvim"
+
+  -- format nvim
+  use "lukas-reineke/format.nvim"
+
+  -- use split terminal
+  use "akinsho/toggleterm.nvim"
+
+  -- comment
+  use "terrortylor/nvim-comment"
+
+  -- lspsaga
+  use 'tami5/lspsaga.nvim'
+
+  -- nvim-lsp-installer
+  use 'williamboman/nvim-lsp-installer'
 end) 

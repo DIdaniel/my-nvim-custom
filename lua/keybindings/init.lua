@@ -7,8 +7,13 @@ map('n', '<C-j>', '<C-w>j', {noremap = true, silent = false})
 map('n', '<C-k>', '<C-w>k', {noremap = true, silent = false})
 
 map('i', 'jj', '<ESC>', {noremap = true, silent = false})
+map('i', 'jk', '<ESC>', {noremap = true, silent = false})
+map('i', 'kj', '<ESC>', {noremap = true, silent = false})
 
 map('n', '<leader>e', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
 
 map('v', '<', '<gv', {noremap = true, silent = false})
 map('v', '>', '>gv', {noremap = true, silent = false})
+
+map("n", "<C-u>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1, '<c-u>')<cr>", {noremap = true, silent = true})
+map("n", "<C-d>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(1, '<c-d>')<cr>", {noremap = true, silent = true})

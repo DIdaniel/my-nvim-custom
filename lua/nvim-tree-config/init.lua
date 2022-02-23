@@ -6,10 +6,12 @@ vim.g.nvim_tree_indent_markers = 1
 -- indent_markers부터 아래 4개는 영상과 동일 대신 .setup {} 다 지우고!
 -- vim.g.nvim_tree_auto_open = 1 
 -- vim.g.nvim_tree_width = 25
--- vim.g.nvim_tree_gitignore = 1
 -- vim.g.nvim_tree_auto_close = 1
 
 require'nvim-tree'.setup {
+  auto_open = 1,
+  auto_close = 1,
+  gitignore = 1,
   disable_netrw        = false,
   hijack_netrw         = true,
   open_on_setup        = false,
@@ -53,7 +55,8 @@ require'nvim-tree'.setup {
     timeout = 500,
   },
   view = {
-    width = 25,
+    -- side menu list size
+    width = 32,
     height = 25,
     hide_root_folder = false,
     side = 'left',
