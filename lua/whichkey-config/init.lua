@@ -59,6 +59,11 @@ local mappings = {
     t = {":ToggleTerm<cr>", "Split Below"},
     f = {toggle_float, "Floating Terminal"},
     l = {toggle_lazygit, "lazyGit"}
+  },
+  z = {
+    name = "Focus Mode",
+    z = {":ZenMode<cr>", "Zen Mode"},
+    t = {":Twilight<cr>", "Twilight"}
   }
 }
 local opts = {prefix = '<leader>'}

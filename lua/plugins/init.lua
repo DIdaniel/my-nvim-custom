@@ -1,10 +1,11 @@
 -- vim.cmd [[packadd packer.nvim]]
-return require('packer').startup(function(use)
+return require('packer').startup(function()
   -- Packer 
   use 'wbthomason/packer.nvim'
 
   -- nvim theme
-  use 'Mofiqul/vscode.nvim' 
+  use 'marko-cerovac/material.nvim'
+  -- use 'Mofiqul/vscode.nvim'
 
   -- treesitter
   use { 'nvim-treesitter/nvim-treesitter', run = ":TSUpdate" }
@@ -83,4 +84,10 @@ return require('packer').startup(function(use)
 
   -- nvim-lsp-installer
   use 'williamboman/nvim-lsp-installer'
-end) 
+
+  -- zen-mode
+  use "folke/zen-mode.nvim" 
+ 
+  -- zen-twilight
+  use "folke/twilight.nvim" 
+  end) 
