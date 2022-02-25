@@ -7,28 +7,57 @@ vim.g.nvim_tree_indent_markers = 1
 -- vim.g.nvim_tree_auto_open = 1 
 -- vim.g.nvim_tree_width = 25
 -- vim.g.nvim_tree_auto_close = 1
+--
+vim.g.nvim_tree_icons = {
+  default = "",
+  symlink = "",
+  git = {
+    unstaged = "",
+    staged = "S",
+    unmerged = "",
+    renamed = "➜",
+    deleted = "",
+    untracked = "U",
+    ignored = "◌",
+  },
+  folder = {
+    default = "",
+    open = "",
+    empty = "",
+    empty_open = "",
+    symlink = "",
+  },
+}
 
 require'nvim-tree'.setup {
   auto_open = 1,
   auto_close = 1,
   gitignore = 1,
-  disable_netrw        = false,
+  disable_netrw        = true,
   hijack_netrw         = true,
   open_on_setup        = false,
-  ignore_ft_on_setup   = {},
+  ignore_ft_on_setup   = {
+    "startify",
+    "dashboard",
+    "alpha",
+  },
   -- auto_close : true => NvimTree menu만 남으면 다 꺼진다
   auto_close           = true,
   auto_reload_on_write = true,
   open_on_tab          = false,
   hijack_cursor        = false,
-  update_cwd           = false,
+  update_cwd           = true,
+  update_to_buf_dir = {
+    enable = true,
+    auto_open = true,
+  },
   hijack_unnamed_buffer_when_opening = true,
   hijack_directories   = {
     enable = true,
     auto_open = true,
   },
   diagnostics = {
-    enable = false,
+    enable = true,
     icons = {
       hint = "⁉️",
       info = "ℹ️",
@@ -37,8 +66,8 @@ require'nvim-tree'.setup {
     }
   },
   update_focused_file = {
-    enable      = false,
-    update_cwd  = false,
+    enable      = true,
+    update_cwd  = true,
     ignore_list = {}
   },
   system_open = {
@@ -73,6 +102,16 @@ require'nvim-tree'.setup {
     cmd = "trash",
     require_confirm = true
   },
+  git_hl = true,
+  disable_window_picker = false,
+  root_folder_modifier = ":t",
+  show_icons = {
+    git = true,
+    folders = true,
+    files = true,
+    folder_arrows = true,
+    tree_width = 30,
+  }, 
   actions = {
     change_dir = {
       global = false,

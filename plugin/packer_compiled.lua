@@ -69,6 +69,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["Comment.nvim"] = {
+    loaded = true,
+    path = "/Users/patrick/.local/share/nvim/site/pack/packer/start/Comment.nvim",
+    url = "https://github.com/numToStr/Comment.nvim"
+  },
   ["bufferline.nvim"] = {
     loaded = true,
     path = "/Users/patrick/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
@@ -109,6 +114,11 @@ _G.packer_plugins = {
     path = "/Users/patrick/.local/share/nvim/site/pack/packer/start/format.nvim",
     url = "https://github.com/lukas-reineke/format.nvim"
   },
+  ["friendly-snippets"] = {
+    loaded = true,
+    path = "/Users/patrick/.local/share/nvim/site/pack/packer/start/friendly-snippets",
+    url = "https://github.com/rafamadriz/friendly-snippets"
+  },
   ["gitsigns.nvim"] = {
     config = { "\27LJ\2\nQ\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\23current_line_blame\2\nsetup\rgitsigns\frequire\0" },
     loaded = true,
@@ -140,6 +150,11 @@ _G.packer_plugins = {
     path = "/Users/patrick/.local/share/nvim/site/pack/packer/start/material.nvim",
     url = "https://github.com/marko-cerovac/material.nvim"
   },
+  ["null-ls.nvim"] = {
+    loaded = true,
+    path = "/Users/patrick/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
+    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
+  },
   ["nvim-autopairs"] = {
     loaded = true,
     path = "/Users/patrick/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
@@ -170,6 +185,11 @@ _G.packer_plugins = {
     path = "/Users/patrick/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
+  ["nvim-transparent"] = {
+    loaded = true,
+    path = "/Users/patrick/.local/share/nvim/site/pack/packer/start/nvim-transparent",
+    url = "https://github.com/xiyaowong/nvim-transparent"
+  },
   ["nvim-tree.lua"] = {
     loaded = true,
     path = "/Users/patrick/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
@@ -185,6 +205,11 @@ _G.packer_plugins = {
     path = "/Users/patrick/.local/share/nvim/site/pack/packer/start/nvim-ts-autotag",
     url = "https://github.com/windwp/nvim-ts-autotag"
   },
+  ["nvim-ts-context-commentstring"] = {
+    loaded = true,
+    path = "/Users/patrick/.local/share/nvim/site/pack/packer/start/nvim-ts-context-commentstring",
+    url = "https://github.com/JoosepAlviste/nvim-ts-context-commentstring"
+  },
   ["nvim-ts-rainbow"] = {
     loaded = true,
     path = "/Users/patrick/.local/share/nvim/site/pack/packer/start/nvim-ts-rainbow",
@@ -199,6 +224,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/patrick/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
+  },
+  playground = {
+    loaded = true,
+    path = "/Users/patrick/.local/share/nvim/site/pack/packer/start/playground",
+    url = "https://github.com/nvim-treesitter/playground"
   },
   ["plenary.nvim"] = {
     loaded = true,

@@ -9,6 +9,7 @@ return require('packer').startup(function()
 
   -- treesitter
   use { 'nvim-treesitter/nvim-treesitter', run = ":TSUpdate" }
+  use 'JoosepAlviste/nvim-ts-context-commentstring'
 
   -- lualine => bottom bar theme
   use { 'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true } }
@@ -25,6 +26,8 @@ return require('packer').startup(function()
   -- indent rainbow 
   use { 'p00f/nvim-ts-rainbow' }
 
+  use "nvim-treesitter/playground"
+
   -- nvim-autoparis
   use { 'windwp/nvim-autopairs' }
 
@@ -37,6 +40,7 @@ return require('packer').startup(function()
   -- cmp
   use 'neovim/nvim-lspconfig'
   use 'hrsh7th/cmp-nvim-lsp'
+
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/cmp-cmdline'
@@ -51,6 +55,7 @@ return require('packer').startup(function()
   use {'dsznajder/vscode-es7-javascript-react-snippets',
     run = 'yarn install --frozen-lockfile && yarn compile'
   }
+  use "rafamadriz/friendly-snippets"
 
   -- colorizer for nvim
   use 'norcalli/nvim-colorizer.lua'
@@ -78,16 +83,21 @@ return require('packer').startup(function()
 
   -- comment
   use "terrortylor/nvim-comment"
+  use "numToStr/Comment.nvim"
 
   -- lspsaga
   use 'tami5/lspsaga.nvim'
 
   -- nvim-lsp-installer
   use 'williamboman/nvim-lsp-installer'
+  use "jose-elias-alvarez/null-ls.nvim"
 
   -- zen-mode
   use "folke/zen-mode.nvim" 
  
   -- zen-twilight
   use "folke/twilight.nvim" 
+
+  -- background parents
+  use "xiyaowong/nvim-transparent"
   end) 

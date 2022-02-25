@@ -10,19 +10,43 @@ local feedkey = function(key, mode)
   vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes(key, true, true, true), mode, true)
 end
 
+--   פּ ﯟ   some other good icons
+local kind_icons = {
+  Text = "",
+  Method = "m",
+  Function = "",
+  Constructor = "",
+  Field = "",
+  Variable = "",
+  Class = "",
+  Interface = "",
+  Module = "",
+  Property = "",
+  Unit = "",
+  Value = "",
+  Enum = "",
+  Keyword = "",
+  Snippet = "",
+  Color = "",
+  File = "",
+  Reference = "",
+  Folder = "",
+  EnumMember = "",
+  Constant = "",
+  Struct = "",
+  Event = "",
+  Operator = "",
+  TypeParameter = "",
+}
+
 -- Setup nvim-cmp.
   local cmp = require'cmp'
   local lspkind = require('lspkind')
 
   cmp.setup({
     snippet = {
-      -- REQUIRED - you must specify a snippet engine
       expand = function(args)
         vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
-        -- require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
-
-        -- require('snippy').expand_snippet(args.body) -- For `snippy` users.
-        -- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
       end,
     },
     mapping = {
@@ -54,6 +78,7 @@ end
           feedkey("<Plug>(vsnip-jump-prev)", "")
         end
       end, { "i", "s" }),
+
     },
     sources = cmp.config.sources({
       { name = 'nvim_lsp' },

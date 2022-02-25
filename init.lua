@@ -17,6 +17,10 @@ require('comment-config')
 require('theme-config')
 require('zen-mode-config')
 require('twilight-config')
+require('transparent-config')
+require('numToStr-comment-config')
+require('commentstring-config')
+require('null-ls-config')
 require('lsp')
 
 

@@ -11,15 +11,13 @@ vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
 )
 
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = {"html", "css", "javascript", "typescript", "lua"}, 
-
-  -- Install languages synchronously (only applied to `ensure_installed`)
-  -- sync_install = false,
-
+  ensure_installed = "maintained",
+  sync_install = false,
   highlight = {
-    enable = true,
-    additional_vim_regex_highlighting = false,
-  },
+      enable = true,
+      disable = { "" },
+      additional_vim_regex_highlighting = true,
+    },
 
   autotag = {
     enable = true,
@@ -32,9 +30,13 @@ require'nvim-treesitter.configs'.setup {
 
   -- rainbow = {
   --   enable = true,
-  --   extended_mode = false, -- Also highlight non-bracket delimiters like html tags, boolean or table: lang -> boolean
+  --   extended_mode = true, -- Also highlight non-bracket delimiters like html tags, boolean or table: lang -> boolean
   --   max_file_lines = nil, -- Do not enable for files with more than n lines, int
   -- },
+  playground = {
+    enable = true,
+  },
+
   indent = {
     enable = true
   },
