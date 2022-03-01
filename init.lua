@@ -21,6 +21,8 @@ require('transparent-config')
 require('numToStr-comment-config')
 require('commentstring-config')
 require('null-ls-config')
+require('autosave-config')
+require('gitgutter-config')
 require('lsp')
 
 

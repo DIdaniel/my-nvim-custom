@@ -110,4 +110,10 @@ return require('packer').startup(function()
 
   -- Git gutter
   use 'airblade/vim-gitgutter'
+
+  -- fugitive
+  use 'tpope/vim-fugitive'
+
+  -- AutoSave
+  use "Pocco81/AutoSave.nvim"
 end) 
