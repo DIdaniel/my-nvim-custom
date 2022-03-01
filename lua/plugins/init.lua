@@ -100,4 +100,8 @@ return require('packer').startup(function()
 
   -- background parents
   use "xiyaowong/nvim-transparent"
-  end) 
+
+  -- jsx prettier
+  use 'maxmellon/vim-jsx-pretty'
+  use 'leafgarland/typescript-vim'
+end) 
