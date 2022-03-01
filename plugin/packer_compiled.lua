@@ -235,6 +235,11 @@ _G.packer_plugins = {
     path = "/Users/patrick/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  tagbar = {
+    loaded = true,
+    path = "/Users/patrick/.local/share/nvim/site/pack/packer/start/tagbar",
+    url = "https://github.com/majutsushi/tagbar"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/Users/patrick/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -254,6 +259,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/patrick/.local/share/nvim/site/pack/packer/start/typescript-vim",
     url = "https://github.com/leafgarland/typescript-vim"
+  },
+  ["vim-gitgutter"] = {
+    loaded = true,
+    path = "/Users/patrick/.local/share/nvim/site/pack/packer/start/vim-gitgutter",
+    url = "https://github.com/airblade/vim-gitgutter"
   },
   ["vim-jsx-pretty"] = {
     loaded = true,

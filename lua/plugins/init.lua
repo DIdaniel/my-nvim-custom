@@ -104,4 +104,10 @@ return require('packer').startup(function()
   -- jsx prettier
   use 'maxmellon/vim-jsx-pretty'
   use 'leafgarland/typescript-vim'
+
+  -- Tagbar
+  use 'majutsushi/tagbar'
+
+  -- Git gutter
+  use 'airblade/vim-gitgutter'
 end) 
